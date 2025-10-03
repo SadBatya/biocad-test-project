@@ -1,0 +1,5 @@
+.block {
+  background-color: var(--secondary-background);
+  border-radius: var(--border-radius);
+  padding: 48px;
+}
