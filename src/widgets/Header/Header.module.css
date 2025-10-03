@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  align-items: center;
+  max-width: 1920px;
+  justify-content: space-between;
+  padding: 36px;
+}
+
+.navigation {
+  background-color: var(--black-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.navigation_list {
+  display: flex;
+  align-items: center;
+}
+
+.navigation_item {
+  padding: 18px 24px;
+  cursor: pointer;
+  color: var(--text-white);
+}
+
+.button_text {
+  font-size: 14px;
+  color: var(--text-black);
+}
+
+.button_arrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.button_arrow > img {
+  transition: all 0.3s;
+}
+
+.button_arrow > img:first-child {
+  opacity: 20%;
+}
+
+.button_arrow > img:nth-child(2) {
+  opacity: 50%;
+}
+
+.button:hover .button_arrow > img:first-child,
+.button:hover .button_arrow > img:nth-child(2) {
+  opacity: 100%;
+}
