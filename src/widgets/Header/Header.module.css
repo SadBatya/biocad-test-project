@@ -3,7 +3,7 @@
   align-items: center;
   max-width: 1920px;
   justify-content: space-between;
-  padding: 36px;
+  padding: 36px 36px 24px 36px;
   position: sticky;
   top: 0;
   z-index: 10;

@@ -5,8 +5,11 @@ import clsx from "clsx";
 interface Props {
   children: ReactNode;
   className?: string;
+  theme?: "white" | "black" | "transparent";
 }
 
-export const Button = ({ children, className }: Props) => (
-  <button className={clsx(style.button, className)}>{children}</button>
+export const Button = ({ children, className, theme = "white" }: Props) => (
+  <button className={clsx(style.button, style[theme], className)}>
+    {children}
+  </button>
 );

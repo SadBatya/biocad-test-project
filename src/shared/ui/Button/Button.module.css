@@ -4,7 +4,21 @@
   align-items: center;
   border-radius: var(--border-radius);
   border: none;
-  background-color: var(--secondary-background);
   padding: 6px;
   cursor: pointer;
+}
+
+.white {
+  background-color: var(--secondary-background);
+  color: var(--text-black);
+}
+
+.black {
+  background-color: var(--black-background);
+  color: var(--text-white);
+}
+
+.transparent {
+  background-color: transparent;
+  color: var(--text-black);
 }
