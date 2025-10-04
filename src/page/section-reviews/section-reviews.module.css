@@ -1,0 +1,36 @@
+.section {
+  background-color: var(--secondary-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content {
+  margin-top: auto;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reviews {
+  display: flex;
+  gap: 24px;
+  align-items: end;
+  overflow-x: auto;
+  width: 100%;
+  margin-top: auto;
+}

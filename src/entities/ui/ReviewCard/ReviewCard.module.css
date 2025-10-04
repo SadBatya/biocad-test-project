@@ -1,0 +1,35 @@
+.card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-radius: var(--border-radius);
+  background-color: var(--main-background);
+  max-width: 420px;
+  flex-shrink: 0;
+}
+
+.card_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card_user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card_body {
+  padding: 24px;
+  background-color: var(--secondary-background);
+  line-height: 150%;
+  border-radius: 18px;
+}
