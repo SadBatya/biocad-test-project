@@ -6,6 +6,8 @@
   border: none;
   padding: 6px;
   cursor: pointer;
+  width: fit-content;
+  transition: all 0.3s;
 }
 
 .white {
@@ -18,7 +20,16 @@
   color: var(--text-white);
 }
 
+.black:hover {
+  opacity: 0.8;
+}
+
 .transparent {
   background-color: transparent;
   color: var(--text-black);
+  padding: 12px 24px;
+}
+
+.transparent:hover {
+  background-color: rgba(0, 0, 0, 0.03);
 }

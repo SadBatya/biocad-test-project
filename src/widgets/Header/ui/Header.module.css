@@ -26,6 +26,20 @@
   color: var(--text-white);
 }
 
+.navigation_item:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navigation_item:first-child::before {
+  content: "";
+  background-image: url("/arrow-left.svg");
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
 .button {
   padding-right: 32px;
 }
