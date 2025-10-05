@@ -9,7 +9,7 @@ import {
 } from "@/shared/ui";
 import Image from "next/image";
 import style from "./section-hero.module.css";
-import { type IPageMain } from "@/widgets/Header/types";
+import { type IPageMain } from "@/shared/types";
 
 export const SectionHero = async () => {
   const res = await fetch(process.env.NETLIFY_API + "/api/main", {

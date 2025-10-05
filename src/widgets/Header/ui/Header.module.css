@@ -4,9 +4,7 @@
   max-width: 1920px;
   justify-content: space-between;
   padding: 36px 36px 24px 36px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  z-index: 50;
 }
 
 .navigation {
@@ -24,6 +22,12 @@
   padding: 18px 24px;
   cursor: pointer;
   color: var(--text-white);
+  transition: all 0.3s;
+}
+
+.navigation_item:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 .navigation_item:first-child {
