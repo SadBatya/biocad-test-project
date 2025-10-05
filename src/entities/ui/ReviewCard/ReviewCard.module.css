@@ -21,6 +21,16 @@
   gap: 12px;
 }
 
+.card_user_image {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--secondary-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .date {
   display: flex;
   align-items: center;

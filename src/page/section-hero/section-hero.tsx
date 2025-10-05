@@ -15,8 +15,8 @@ export const SectionHero = async () => {
   const res = await fetch(process.env.NETLIFY_API + "/api/main", {
     next: { revalidate: 3600 },
   });
+
   const data: IPageMain = await res.json();
-  console.log(data, "main page");
 
   return (
     <Section className={style.section}>
