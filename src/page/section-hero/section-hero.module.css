@@ -34,7 +34,7 @@
   max-width: 204px;
 }
 
-.block:nth-child(4) {
+.block:last-child {
   grid-area: app-button;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@
   gap: 18px;
 }
 
-.block:nth-child(4) .block_description {
+.block:last-child .block_description {
   margin-bottom: 6px;
 }
 

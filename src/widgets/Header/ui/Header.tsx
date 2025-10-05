@@ -2,7 +2,7 @@ import { Logo, Button, Icon } from "@/shared/ui";
 import style from "./Header.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { type IHeader } from "../types/types";
+import { type IHeader } from "../types/header";
 import { navigation } from "../model/data";
 
 export const Header = async () => {
