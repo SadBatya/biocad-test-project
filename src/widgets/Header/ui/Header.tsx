@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { type IHeader } from "../types/header";
 import { navigation } from "../model/data";
+import { BurgerMenu } from "@/widgets/BurgerMenu/BurgerMenu";
 
 export const Header = async () => {
   let headerData: IHeader | null = null;
@@ -22,9 +23,12 @@ export const Header = async () => {
 
   return (
     <header className={style.header}>
-      <Link href={headerData?.logo.link}>
-        <Logo />
-      </Link>
+      <div className={style.header_logo_and_menu}>
+        <BurgerMenu menu={headerData?.menu} />
+        <Link href={headerData?.logo.link}>
+          <Logo />
+        </Link>
+      </div>
       <nav className={style.navigation}>
         <ul className={style.navigation_list}>
           {headerData?.menu.map(({ id, label, link }) => (
