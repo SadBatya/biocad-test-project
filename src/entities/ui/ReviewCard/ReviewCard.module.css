@@ -43,3 +43,9 @@
   line-height: 150%;
   border-radius: 18px;
 }
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}

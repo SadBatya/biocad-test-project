@@ -10,10 +10,9 @@ export const SectionReviews = async () => {
   });
 
   const data: ISectionReview = await res.json();
-  console.log(data, "slider");
 
   return (
-    <Section className={style.section}>
+    <Section className={style.section} id="reviews">
       <div className={style.content}>
         <Image
           src="/circle.svg"

@@ -5,8 +5,11 @@ import clsx from "clsx";
 interface Props {
   children: ReactNode;
   className?: string;
+  id?: string;
 }
 
-export const Section = ({ children, className }: Props) => (
-  <section className={clsx(style.section, className)}>{children}</section>
+export const Section = ({ children, className, id }: Props) => (
+  <section className={clsx(style.section, className)} id={id}>
+    {children}
+  </section>
 );

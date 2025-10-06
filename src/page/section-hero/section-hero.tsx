@@ -33,13 +33,17 @@ export const SectionHero = async () => {
   }
 
   return (
-    <Section className={style.section}>
+    <Section className={style.section} id="hero">
       <Block className={style.block}>
         <BurgerMenu
           menu={headerData?.menu || []}
           className={style.burger_menu}
         />
-        <Button className={style.button_apk} theme="transparent" disabled={data.buttons.apk.enabled}>
+        <Button
+          className={style.button_apk}
+          theme="transparent"
+          disabled={data.buttons.apk.enabled}
+        >
           {data.buttons.apk.label}
           <Image
             src="/download-black.svg"

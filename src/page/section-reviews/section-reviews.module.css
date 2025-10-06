@@ -33,4 +33,26 @@
   overflow-x: auto;
   width: 100%;
   margin-top: auto;
+  justify-content: flex-start;
+  padding-bottom: 24px;
+  scrollbar-width: thin;
+  scrollbar-color: #7d9cfd var(--main-background);
+}
+
+.reviews::-webkit-scrollbar {
+  height: 4px;
+}
+
+.reviews::-webkit-scrollbar-track {
+  background: var(--secondary-background);
+  border-radius: 32px;
+}
+
+.reviews::-webkit-scrollbar-thumb {
+  background: #7d9cfd;
+  border-radius: 32px;
+}
+
+.reviews::-webkit-scrollbar-thumb:hover {
+  background: #7d9cfd;
 }

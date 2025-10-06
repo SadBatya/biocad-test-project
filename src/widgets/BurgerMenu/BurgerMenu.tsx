@@ -25,7 +25,11 @@ export const BurgerMenu = ({ menu, className }: Props) => {
       <nav className={clsx(style.burger_menu_list, isOpen && style.open)}>
         <ul className={style.navigation_list}>
           {menu.map(({ id, label, link }) => (
-            <li className={style.navigation_item} key={id}>
+            <li
+              onClick={() => setIsOpen(false)}
+              className={style.navigation_item}
+              key={id}
+            >
               <Link href={link}>{label}</Link>
             </li>
           ))}
