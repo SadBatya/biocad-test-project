@@ -8,6 +8,7 @@
   cursor: pointer;
   width: fit-content;
   transition: all 0.3s;
+  text-wrap: nowrap;
 }
 
 .white {

@@ -7,13 +7,15 @@ import clsx from "clsx";
 import { type INavigation } from "@/shared/types";
 import Link from "next/link";
 
-type Props = INavigation;
+interface Props extends INavigation {
+  className?: string;
+}
 
-export const BurgerMenu = ({ menu }: Props) => {
+export const BurgerMenu = ({ menu, className }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={style.burger_menu}>
+    <div className={clsx(style.burger_menu, className)}>
       <button
         className={clsx(style.burger_button, isOpen && style.open)}
         onClick={() => setIsOpen(!isOpen)}

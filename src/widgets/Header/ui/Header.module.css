@@ -29,6 +29,7 @@
   cursor: pointer;
   color: var(--text-white);
   transition: all 0.3s;
+  text-wrap: nowrap;
 }
 
 .navigation_item:hover {
@@ -81,4 +82,16 @@
 .button:hover .button_arrow > img:first-child,
 .button:hover .button_arrow > img:nth-child(2) {
   opacity: 100%;
+}
+
+@media (max-width: 1199px) {
+  .navigation {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .header {
+    display: none;
+  }
 }

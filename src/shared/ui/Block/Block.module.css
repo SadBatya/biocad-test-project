@@ -4,3 +4,9 @@
   padding: 48px;
   width: fit-content;
 }
+
+@media (max-width: 1199px) {
+  .block {
+    padding: 36px;
+  }
+}

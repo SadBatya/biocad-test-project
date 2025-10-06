@@ -4,10 +4,19 @@
   align-items: center;
   max-width: 1920px;
   padding: 36px;
+  flex-wrap: wrap;
+  gap: 18px;
 }
 
 .socials {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+@media (max-width: 745px) {
+  .footer {
+    justify-content: center;
+    flex-direction: column;
+  }
 }

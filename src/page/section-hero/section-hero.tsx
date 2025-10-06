@@ -7,9 +7,10 @@ import {
   Icon,
   Modal,
 } from "@/shared/ui";
+import { BurgerMenu } from "@/widgets/BurgerMenu/BurgerMenu";
 import Image from "next/image";
 import style from "./section-hero.module.css";
-import { type IPageMain } from "@/shared/types";
+import { type IPageMain, type IHeader } from "@/shared/types";
 
 export const SectionHero = async () => {
   const res = await fetch(process.env.NETLIFY_API + "/api/main", {
@@ -18,9 +19,26 @@ export const SectionHero = async () => {
 
   const data: IPageMain = await res.json();
 
+  let headerData: IHeader | null = null;
+
+  try {
+    const headerRes = await fetch(process.env.NETLIFY_API + "/api/navigation", {
+      next: { revalidate: 3600 },
+    });
+
+    headerData = await headerRes.json();
+    console.log(headerData, "headerData");
+  } catch (error) {
+    console.log(error, "Ошибка загрузки данных header");
+  }
+
   return (
     <Section className={style.section}>
       <Block className={style.block}>
+        <BurgerMenu
+          menu={headerData?.menu || []}
+          className={style.burger_menu}
+        />
         <Button theme="transparent" disabled={data.buttons.apk.enabled}>
           {data.buttons.apk.label}
           <Image
@@ -90,8 +108,12 @@ export const SectionHero = async () => {
       </Modal>
 
       <Block className={style.block}>
-        <Icon color="var(--color-green)" src="/scan-code.svg" />
-        <p className={style.block_description}>{data.sidebar.qr_code.label}</p>
+        <div className={style.block_title}>
+          <Icon color="var(--color-green)" src="/scan-code.svg" />
+          <p className={style.block_description}>
+            {data.sidebar.qr_code.label}
+          </p>
+        </div>
         <Image src="/qrcode.svg" alt="qrcode" width={120} height={120} />
       </Block>
     </Section>

@@ -1,4 +1,4 @@
-import { type INavigationMenu } from "@/shared/types";
+import { type INavigationMenu } from "./navigation";
 
 export interface IHeader {
   logo: {

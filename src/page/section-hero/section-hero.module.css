@@ -18,6 +18,10 @@
   width: 100%;
 }
 
+.burger_menu {
+  display: none;
+}
+
 .block:first-child {
   grid-area: content;
 }
@@ -78,4 +82,125 @@
   position: absolute;
   bottom: 15%;
   left: 10%;
+}
+
+@media (max-width: 1199px) {
+  .section {
+    grid-template-areas:
+      "content content content video video video"
+      "content content content video video video"
+      "watch-video app-button app-button video video video";
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: stretch;
+  }
+
+  .content {
+    gap: 18px;
+  }
+
+  .block:nth-child(3) > .block {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .block:nth-child(3) > .block .block_description {
+    text-align: left;
+  }
+
+  .block:last-child {
+    flex-direction: row;
+    max-width: 100%;
+  }
+
+  .block_title {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .block_title .block_description {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    height: auto;
+    grid-template-areas:
+      "content content content content"
+      "video video video video"
+      "watch-video app-button app-button app-button";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .content {
+    margin-bottom: 33px;
+  }
+
+  .block:nth-child(2) {
+    max-height: 377px;
+  }
+
+  .block_video {
+    max-height: 320px;
+  }
+
+  .block:nth-child(3) > .block {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .block:nth-child(3) > .block .block_description {
+    text-align: center;
+  }
+
+  .block_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .block:last-child {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 620px) {
+  .section {
+    height: auto;
+    grid-template-areas:
+      "content"
+      "video"
+      "watch-video"
+      "app-button";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 36px;
+  }
+
+  .block:first-child {
+    position: relative;
+  }
+
+  .burger_menu {
+    display: block;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+
+  .block:nth-child(2) {
+    max-height: 100%;
+  }
+
+  .block:nth-child(3) {
+    max-width: 100%;
+  }
 }

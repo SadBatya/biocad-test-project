@@ -2,7 +2,7 @@ import { Logo, Button, Icon } from "@/shared/ui";
 import style from "./Header.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { type IHeader } from "../types/header";
+import { IHeader } from "@/shared/types";
 import { navigation } from "../model/data";
 import { BurgerMenu } from "@/widgets/BurgerMenu/BurgerMenu";
 
@@ -24,8 +24,8 @@ export const Header = async () => {
   return (
     <header className={style.header}>
       <div className={style.header_logo_and_menu}>
-        <BurgerMenu menu={headerData?.menu} />
-        <Link href={headerData?.logo.link}>
+        <BurgerMenu menu={headerData?.menu || []} />
+        <Link href={headerData?.logo.link || "/"}>
           <Logo />
         </Link>
       </div>

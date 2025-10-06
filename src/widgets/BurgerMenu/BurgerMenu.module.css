@@ -56,15 +56,8 @@
   -webkit-text-fill-color: transparent;
 }
 
-@media (max-width: 745px) {
+@media (max-width: 1199px) {
   .burger_menu {
     display: block;
-  }
-}
-
-@media (max-width: 480px) {
-  .burger_button {
-    width: 48px;
-    height: 48px;
   }
 }
