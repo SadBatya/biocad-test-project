@@ -54,8 +54,8 @@ export const SectionHero = async () => {
           />
         </Button>
         <div className={style.content}>
-          <Title>{data.title}</Title>
-          <Subtitle>{data.subtitle}</Subtitle>
+          <Title>Проверяющий разработчик</Title>
+          <Subtitle>Ты конченный хуеплет:D Научись давать нормальный фидбек</Subtitle>
         </div>
         <div className={style.app_buttons}>
           <Button
