@@ -1,4 +1,4 @@
-import { type IHeader } from "../types/header";
+import { type IHeader } from "@/shared/types";
 
 export const navigation: IHeader = {
   logo: { text: "Revmo.info app", link: "/" },
