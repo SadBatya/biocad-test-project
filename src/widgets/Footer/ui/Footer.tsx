@@ -1,8 +1,9 @@
+import Link from "next/link";
 import { Logo, Icon } from "@/shared/ui";
 import { socialsIcons } from "../model/data";
-import Link from "next/link";
-import style from "./Footer.module.css";
 import { IPageMain } from "@/shared/types";
+
+import style from "./Footer.module.css";
 
 export const Footer = async () => {
   let footerData: IPageMain | null = null;

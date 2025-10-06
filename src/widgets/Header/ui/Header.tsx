@@ -1,10 +1,11 @@
-import { Logo, Button, Icon } from "@/shared/ui";
-import style from "./Header.module.css";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { Logo, Button, Icon } from "@/shared/ui";
 import { IHeader } from "@/shared/types";
 import { navigation } from "../model/data";
-import { BurgerMenu } from "@/widgets/BurgerMenu/BurgerMenu";
+import { BurgerMenu } from "@/widgets";
+
+import style from "./Header.module.css";
 
 export const Header = async () => {
   let headerData: IHeader | null = null;

@@ -1,8 +1,9 @@
-import { Title, Subtitle, Section } from "@/shared/ui";
-import style from "./section-reviews.module.css";
-import { ReviewCard } from "@/entities/ui";
 import Image from "next/image";
 import { type ISectionReview } from "./types/section-review";
+import { Title, Subtitle, Section } from "@/shared/ui";
+import { ReviewCard } from "@/entities/ui";
+
+import style from "./section-reviews.module.css";
 
 export const SectionReviews = async () => {
   const res = await fetch(process.env.NETLIFY_API + "/api/slider", {

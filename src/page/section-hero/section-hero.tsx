@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { type IPageMain, type IHeader } from "@/shared/types";
 import {
   Block,
   Button,
@@ -8,9 +10,8 @@ import {
   Modal,
 } from "@/shared/ui";
 import { BurgerMenu } from "@/widgets/BurgerMenu/BurgerMenu";
-import Image from "next/image";
+
 import style from "./section-hero.module.css";
-import { type IPageMain, type IHeader } from "@/shared/types";
 
 export const SectionHero = async () => {
   const res = await fetch(process.env.NETLIFY_API + "/api/main", {

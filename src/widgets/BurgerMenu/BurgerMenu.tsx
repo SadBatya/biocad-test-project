@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import style from "./BurgerMenu.module.css";
+import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
+import { useState } from "react";
 import { type INavigation } from "@/shared/types";
-import Link from "next/link";
+
+import style from "./BurgerMenu.module.css";
 
 interface Props extends INavigation {
   className?: string;
