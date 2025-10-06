@@ -171,24 +171,34 @@
 @media (max-width: 620px) {
   .section {
     height: auto;
-    grid-template-areas:
+    /* grid-template-areas:
       "content"
       "video"
       "watch-video"
       "app-button";
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    padding: 36px;
+    grid-template-rows: repeat(2, 1fr); */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app_buttons {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .app_button {
+    width: 100%;
+    justify-content: center;
   }
 
   .block:first-child {
     position: relative;
+    text-align: center;
   }
 
   .burger_menu {
     display: block;
-    width: 48px;
-    height: 48px;
     position: absolute;
     top: 0;
     left: 0;
@@ -202,5 +212,13 @@
 
   .block:nth-child(3) {
     max-width: 100%;
+  }
+
+  .button_apk {
+    order: 2;
+    margin: 0 auto;
+  }
+  .block:last-child {
+    flex-direction: column;
   }
 }

@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <SectionHero />
-      <SectionReviews />
+      {/* <SectionReviews /> */}
     </>
   );
 }

@@ -61,3 +61,10 @@
     display: block;
   }
 }
+
+@media (max-width: 620px) {
+  .burger_button {
+    width: 48px;
+    height: 48px;
+  }
+}

@@ -39,7 +39,7 @@ export const SectionHero = async () => {
           menu={headerData?.menu || []}
           className={style.burger_menu}
         />
-        <Button theme="transparent" disabled={data.buttons.apk.enabled}>
+        <Button className={style.button_apk} theme="transparent" disabled={data.buttons.apk.enabled}>
           {data.buttons.apk.label}
           <Image
             src="/download-black.svg"

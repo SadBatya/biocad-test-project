@@ -2,3 +2,9 @@
   height: calc(100vh - 123px);
   padding: 0 36px 24px 36px;
 }
+
+@media (max-width: 620px) {
+  .section {
+    padding: 24px;
+  }
+}
